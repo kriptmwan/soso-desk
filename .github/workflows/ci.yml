@@ -1,0 +1,21 @@
+# SOSO Desk — CI: run the signal-engine test suite on every push/PR.
+# Add via the GitHub web UI (Repo -> .github/workflows/ci.yml) — the push
+# token used to create this repo lacks the `workflow` scope.
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run engine tests
+        run: node test-engine.mjs
