@@ -1,0 +1,55 @@
+# SOSO Desk — live data refresh
+# Runs fetch-data.mjs with the SoSoValue API key from the repo secret and
+# commits data/snapshot.json when it changes, so the GitHub Pages demo stays
+# fresh without anyone ever committing a key.
+#
+# Setup (once, by the repo owner):
+#   1. Get a free key at https://sosovalue.com/developer/dashboard
+#      ("Apply your Key" — free tier, 100k req/month).
+#   2. Add it as a repo secret named SOSO_API_KEY:
+#      Repo -> Settings -> Secrets and variables -> Actions -> New repository secret.
+#   3. Run the workflow once manually (Actions tab -> "Refresh snapshot" ->
+#      Run workflow) and check the run log.
+#
+# The fetcher labels every section LIVE / SAMPLE / STALE / FAILED and keeps
+# the previous section's data when a live call fails, so a bad run never
+# publishes a half-empty snapshot. It also keeps working when the key is
+# missing (it just keeps the checked-in sample).
+name: Refresh snapshot
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-snapshot
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch live snapshot
+        env:
+          SOSO_API_KEY: ${{ secrets.SOSO_API_KEY }}
+        run: node fetch-data.mjs
+
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "soso-desk-bot"
+          git config user.email "soso-desk-bot@users.noreply.github.com"
+          git add data/snapshot.json data/signals-log.json
+          git diff --cached --quiet || git commit -m "chore: refresh live snapshot [skip ci]"
+          git push
