@@ -104,7 +104,7 @@ Verified 24 Nov 2026: from the build VM, Cloudflare's edge blocks SoSoValue's `/
 | Criterion (weight) | How SOSO Desk answers it |
 |---|---|
 | User Value 30% | One person, one page: ranked signals with a size cap and a copy-paste ticket. No setup, no wallet, no paywall. |
-| Functionality & Demo 25% | Live dashboard + working refresh pipeline + 26 passing engine tests. Demo works with or without a key. |
+| Functionality & Demo 25% | Live dashboard + working refresh pipeline + 30 passing engine tests. Demo works with or without a key. |
 | Logic / Workflow / Design 20% | Weighted matrix with visible math, confirmation rule, conflict detection, What-If mode, risk profiles. |
 | Data / API Integration 15% | Three live SoSoValue endpoints with per-section provenance; key via env/secret only. |
 | UX & Clarity 10% | One screen, plain language, every number labelled with its source and age. |
