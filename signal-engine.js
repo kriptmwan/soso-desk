@@ -283,6 +283,6 @@ export function tradeTicket(signal, snap) {
     ...signal.risks.map((r) => `  - ${r}`),
     `Data: ${snap.source || 'unknown'} snapshot, fetched ${snap.fetched_at || 'n/a'} via SoSoValue API (market snapshot + ETF flows + hot news).`,
     'Not financial advice. Read-only decision support — SOSO Desk never moves funds.',
-  ];
+  );
   return lines.join('\n');
 }
