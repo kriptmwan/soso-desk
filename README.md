@@ -78,6 +78,8 @@ For each tracked asset (BTC, ETH, SOL, BNB, XRP, DOGE):
 
 `strength = 0.5·ETF + 0.3·Market + 0.2·News` (−100…100). Direction: **ACCUMULATE** if strength ≥ +15 with ≥ 2 confirmations; **REDUCE** if ≤ −15 with ≥ 2; **DIVERGENT** if any component ≥ 25 points against the total while |strength| < 40 (size forced to 0); otherwise **WAIT**.
 
+**Why these weights:** ETF flows get 50% because institutional flows are the most persistent, least noisy signal in the set — large, slow-moving, and hard to fake. Market momentum gets 30%: price confirms a move but whipsaws intraday. News gets 20%: it is the fastest input but also the noisiest and most gameable, so it can tip a close call but never drive one alone. Scales are chosen so a strong day hits the cap: ±$500M of daily net ETF flow and ±5% in 24h are both "significant day" magnitudes for the majors. The thresholds (≥15 to act, ≥25 to call a conflict) were set so ordinary noise stays WAIT while real alignment pays.
+
 The news lexicon lives in `signal-engine.js` (`BULLISH_WORDS` / `BEARISH_WORDS`) — public, auditable, and the bullish/bearish counts are shown in the UI next to the score.
 
 ## API integration (what is genuinely called)

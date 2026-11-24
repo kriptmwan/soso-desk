@@ -266,7 +266,13 @@ export function appendHistoryEntry(log, entry, maxEntries = 30) {
   return list.slice(0, maxEntries);
 }
 export function tradeTicket(signal, snap) {
-  const lines = [
+  // Watermark: a ticket built from non-live data says so on its first line,
+  // so nobody can act on sample/stale numbers by mistake (Gate 2, MiMo).
+  const lines = [];
+  if (snap.source !== 'live') {
+    lines.push('⚠ SAMPLE/STALE DATA — illustrative only. Do NOT trade on this.');
+  }
+  lines.push(
     'SOSO DESK — TRADE TICKET',
     `Asset: ${signal.asset}  |  Call: ${signal.direction}  |  Strength: ${signal.strength}/100 (${signal.confidence} confidence)`,
     `Suggested size: up to ${signal.capPct}% of portfolio (${signal.profile} profile)`,

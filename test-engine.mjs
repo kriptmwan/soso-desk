@@ -54,6 +54,8 @@ console.log('== aligned bullish -> ACCUMULATE ==');
   check('explanation cites numbers', sig.explanation.join(' ').includes('$500.0M'));
   const ticket = tradeTicket(sig, snap);
   check('ticket has call + size', ticket.includes('ACCUMULATE') && ticket.includes('3.7%'));
+  check('ticket watermarked when source is sample', ticket.includes('SAMPLE/STALE DATA'));
+  check('ticket clean when source is live', !tradeTicket(sig, { ...snap, source: 'live' }).includes('SAMPLE/STALE DATA'));
 }
 
 console.log('== conflicting inputs -> DIVERGENT, cap 0 ==');
