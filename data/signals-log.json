@@ -1,5 +1,50 @@
 [
   {
+    "fetched_at": "2026-11-24T16:55:29.225Z",
+    "source": "live",
+    "regime": "RISK-OFF — flows, price and news mostly agree downward",
+    "regimeScore": -28.6,
+    "profile": "Balanced",
+    "signals": [
+      {
+        "asset": "BTC",
+        "direction": "REDUCE",
+        "strength": -69.9,
+        "capPct": 3.5
+      },
+      {
+        "asset": "SOL",
+        "direction": "WAIT",
+        "strength": -20.6,
+        "capPct": 0
+      },
+      {
+        "asset": "XRP",
+        "direction": "WAIT",
+        "strength": -20.4,
+        "capPct": 0
+      },
+      {
+        "asset": "ETH",
+        "direction": "WAIT",
+        "strength": -20.3,
+        "capPct": 0
+      },
+      {
+        "asset": "DOGE",
+        "direction": "WAIT",
+        "strength": -20.3,
+        "capPct": 0
+      },
+      {
+        "asset": "BNB",
+        "direction": "WAIT",
+        "strength": -20.2,
+        "capPct": 0
+      }
+    ]
+  },
+  {
     "fetched_at": "2026-11-24T04:38:32.725Z",
     "source": "live",
     "regime": "NEUTRAL — no confirmed market edge",
