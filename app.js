@@ -189,6 +189,28 @@ function renderTables() {
   $('provenance').innerHTML = prov.join('<br>');
 }
 
+function loadPrefs() {
+  try {
+    if (typeof localStorage === 'undefined') return;
+    const p = localStorage.getItem('soso-desk-profile');
+    if (p && ['conservative', 'balanced', 'aggressive'].includes(p)) {
+      profile = p;
+      document.querySelectorAll('.profile').forEach((b) => b.classList.toggle('active', b.dataset.profile === p));
+    }
+    const w = JSON.parse(localStorage.getItem('soso-desk-whatif') || '{}');
+    if (w.etf) $('whatifEtf').value = w.etf;
+    if (w.news) $('whatifNews').value = w.news;
+  } catch { /* private mode etc. — prefs are a nicety, not load-bearing */ }
+}
+
+function savePrefs() {
+  try {
+    if (typeof localStorage === 'undefined') return;
+    localStorage.setItem('soso-desk-profile', profile);
+    localStorage.setItem('soso-desk-whatif', JSON.stringify({ etf: $('whatifEtf').value, news: $('whatifNews').value }));
+  } catch { /* ignore */ }
+}
+
 async function init() {
   try {
     const res = await fetch('./data/snapshot.json', { cache: 'no-cache' });
@@ -199,6 +221,7 @@ async function init() {
     return;
   }
   renderHeader();
+  loadPrefs();
   renderDesk();
   renderTables();
 
@@ -207,14 +230,16 @@ async function init() {
       document.querySelectorAll('.profile').forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
       profile = btn.dataset.profile;
+      savePrefs();
       renderDesk();
     });
   });
-  $('whatifEtf').addEventListener('change', renderDesk);
-  $('whatifNews').addEventListener('change', renderDesk);
+  $('whatifEtf').addEventListener('change', () => { savePrefs(); renderDesk(); });
+  $('whatifNews').addEventListener('change', () => { savePrefs(); renderDesk(); });
   $('resetWhatif').addEventListener('click', () => {
     $('whatifEtf').value = 'as-is';
     $('whatifNews').value = 'as-is';
+    savePrefs();
     renderDesk();
   });
 }
