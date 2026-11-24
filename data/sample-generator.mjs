@@ -7,7 +7,7 @@
 // whenever SOSO_API_KEY is set; re-run this script to restore the sample.
 
 import { writeFileSync, renameSync } from 'node:fs';
-import { scoreNewsSentiment } from '../signal-engine.js';
+import { scoreNewsSentiment, analyzeDesk, summarizeDesk } from '../signal-engine.js';
 
 const OUT = new URL('./snapshot.json', import.meta.url);
 
@@ -68,3 +68,11 @@ const tmp = `${OUT.pathname}.tmp`;
 writeFileSync(tmp, `${JSON.stringify(snapshot, null, 2)}\n`);
 renameSync(tmp, OUT.pathname);
 console.log(`WROTE sample ${OUT.pathname} — market ${market.length}, etf ${etf.length}, news ${news.length}, sentiment ${newsSentiment.score}`);
+
+// Seed the signal-history log with one entry from this sample snapshot
+// (labelled sample, like everything else in the demo data).
+const logOut = new URL('./signals-log.json', import.meta.url);
+const logTmp = `${logOut.pathname}.tmp`;
+writeFileSync(logTmp, `${JSON.stringify([summarizeDesk(analyzeDesk(snapshot, 'balanced'))], null, 2)}\n`);
+renameSync(logTmp, logOut.pathname);
+console.log(`WROTE sample ${logOut.pathname} — 1 entry (sample)`);

@@ -11,6 +11,7 @@ SOSO Desk turns SoSoValue market snapshots, ETF flows and hot news into **ranked
 - **Position-size caps:** profile max (Conservative 2% / Balanced 5% / Aggressive 10% per trade) scaled by signal strength.
 - **Trade ticket:** one click copies a plain-text ticket (call, size, why, risks) to paste anywhere.
 - **What-If mode:** flip ETF flows or news sentiment and watch every signal recompute live in your browser — proof the engine runs client-side and is not hardcoded.
+- **Signal history:** every refresh appends one entry to `data/signals-log.json` (regime + per-asset calls, last 30 runs) — the desk's track record, rendered on the dashboard. No accountability-free signals.
 - **Read-only by design:** SOSO Desk never moves funds, never holds keys, never asks for a wallet. Decision support, not financial advice.
 
 ## The demo, honestly
@@ -25,7 +26,7 @@ The dashboard reads `data/snapshot.json`. Every section carries a **LIVE / SAMPL
 ```bash
 git clone https://github.com/kriptmwan/soso-desk.git
 cd soso-desk
-npm test            # 26 checks on the signal engine — no key, no network
+npm test            # 30 checks on the signal engine — no key, no network
 npm run serve       # serves the dashboard at http://localhost:8000
 ```
 
@@ -61,7 +62,8 @@ Why this shape: it eliminates the three classic hackathon killers — API rate l
 | `data/snapshot.json` | The snapshot the dashboard reads. Schema v1: `source`, `fetched_at`, `fetch_commit`, `sections{...}`, `market[]`, `etf[]`, `news[]`, `news_sentiment{}`. |
 | `data/sample-generator.mjs` | Regenerates the labelled sample snapshot (illustrative values, real currency IDs). |
 | `index.html` + `app.js` | The dashboard. No build step, no CDN dependencies. |
-| `test-engine.mjs` | 26 engine checks (sentiment, ACCUMULATE/DIVERGENT/WAIT, caps, What-If, no-ETF edge, sample-snapshot end-to-end). |
+| `data/signals-log.json` | Signal history: one entry per refresh (regime + per-asset calls), last 30 runs. Rendered on the dashboard. |
+| `test-engine.mjs` | 30 engine checks (sentiment, ACCUMULATE/DIVERGENT/WAIT, caps, What-If, no-ETF edge, history helpers, sample-snapshot end-to-end). Run in CI on every push (`.github/workflows/ci.yml`). |
 | `.github/workflows/refresh-snapshot.yml` | Every 6h + manual: fetch with the `SOSO_API_KEY` secret, commit if changed. |
 
 ## How the signal is built

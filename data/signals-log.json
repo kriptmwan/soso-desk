@@ -1,0 +1,47 @@
+[
+  {
+    "fetched_at": "2026-11-24T03:58:37.712Z",
+    "source": "sample",
+    "regime": "RISK-ON — flows, price and news mostly agree upward",
+    "regimeScore": 30.5,
+    "profile": "Balanced",
+    "signals": [
+      {
+        "asset": "BTC",
+        "direction": "ACCUMULATE",
+        "strength": 74.4,
+        "capPct": 3.7
+      },
+      {
+        "asset": "ETH",
+        "direction": "ACCUMULATE",
+        "strength": 41.6,
+        "capPct": 2.1
+      },
+      {
+        "asset": "DOGE",
+        "direction": "ACCUMULATE",
+        "strength": 31.7,
+        "capPct": 1.6
+      },
+      {
+        "asset": "BNB",
+        "direction": "ACCUMULATE",
+        "strength": 17.2,
+        "capPct": 0.9
+      },
+      {
+        "asset": "SOL",
+        "direction": "WAIT",
+        "strength": 11.2,
+        "capPct": 0
+      },
+      {
+        "asset": "XRP",
+        "direction": "WAIT",
+        "strength": 6.7,
+        "capPct": 0
+      }
+    ]
+  }
+]

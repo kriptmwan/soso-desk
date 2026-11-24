@@ -244,7 +244,27 @@ export function analyzeDesk(snap, profileName = 'balanced', overridesByAsset = {
   };
 }
 
-// --- Trade ticket (copy-paste text). ------------------------------------------
+// --- Signal history (track record). ------------------------------------------
+// The refresh pipeline appends one entry per run so the desk accumulates a
+// verifiable track record (regime + per-asset calls). Pure + testable.
+export function summarizeDesk(desk) {
+  return {
+    fetched_at: desk.snapshotFetchedAt,
+    source: desk.source,
+    regime: desk.regime,
+    regimeScore: desk.regimeScore,
+    profile: desk.profile,
+    signals: desk.signals.map((s) => ({
+      asset: s.asset, direction: s.direction, strength: s.strength, capPct: s.capPct,
+    })),
+  };
+}
+
+export function appendHistoryEntry(log, entry, maxEntries = 30) {
+  const list = Array.isArray(log) ? [...log] : [];
+  list.unshift(entry);
+  return list.slice(0, maxEntries);
+}
 export function tradeTicket(signal, snap) {
   const lines = [
     'SOSO DESK — TRADE TICKET',

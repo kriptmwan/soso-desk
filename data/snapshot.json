@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
   "source": "sample",
-  "fetched_at": "2026-11-24T03:47:29.397Z",
+  "fetched_at": "2026-11-24T03:58:37.712Z",
   "fetch_commit": "sample",
   "generator": "data/sample-generator.mjs — ILLUSTRATIVE values, not real market data",
   "note": "SAMPLE DATA: illustrative values for demo purposes. Run `SOSO_API_KEY=<key> node fetch-data.mjs` for live SoSoValue data.",
   "sections": {
     "market": {
       "status": "sample",
-      "fetched_at": "2026-11-24T03:47:29.412Z",
+      "fetched_at": "2026-11-24T03:58:37.717Z",
       "error": null
     },
     "etf": {
       "status": "sample",
-      "fetched_at": "2026-11-24T03:47:29.412Z",
+      "fetched_at": "2026-11-24T03:58:37.717Z",
       "error": null
     },
     "news": {
       "status": "sample",
-      "fetched_at": "2026-11-24T03:47:29.412Z",
+      "fetched_at": "2026-11-24T03:58:37.717Z",
       "error": null
     }
   },
@@ -237,61 +237,61 @@
       "id": 1,
       "title": "Bitcoin ETFs see $592M in net inflows as institutional buying accelerates",
       "source_link": "https://sosovalue.xyz/news/cluster/1",
-      "release_time": 1795484849397
+      "release_time": 1795485517711
     },
     {
       "id": 2,
       "title": "Ethereum rallies past $2,950 on strong ETF demand and network upgrades",
       "source_link": "https://sosovalue.xyz/news/cluster/2",
-      "release_time": 1795481249397
+      "release_time": 1795481917711
     },
     {
       "id": 3,
       "title": "Solana network activity cools as traders rotate into Bitcoin",
       "source_link": "https://sosovalue.xyz/news/cluster/3",
-      "release_time": 1795477649397
+      "release_time": 1795478317711
     },
     {
       "id": 4,
       "title": "Analysts flag record stablecoin inflows to exchanges ahead of year-end",
       "source_link": "https://sosovalue.xyz/news/cluster/4",
-      "release_time": 1795474049397
+      "release_time": 1795474717711
     },
     {
       "id": 5,
       "title": "Crypto market cap reclaims $3 trillion as risk appetite returns",
       "source_link": "https://sosovalue.xyz/news/cluster/5",
-      "release_time": 1795470449397
+      "release_time": 1795471117711
     },
     {
       "id": 6,
       "title": "Regulator warns on leveraged crypto products after volatile week",
       "source_link": "https://sosovalue.xyz/news/cluster/6",
-      "release_time": 1795463249397
+      "release_time": 1795463917711
     },
     {
       "id": 7,
       "title": "Dogecoin jumps 3% as memecoin volumes surge across exchanges",
       "source_link": "https://sosovalue.xyz/news/cluster/7",
-      "release_time": 1795459649397
+      "release_time": 1795460317711
     },
     {
       "id": 8,
       "title": "XRP slips as profit-taking hits altcoins",
       "source_link": "https://sosovalue.xyz/news/cluster/8",
-      "release_time": 1795452449397
+      "release_time": 1795453117711
     },
     {
       "id": 9,
       "title": "Major bank launches tokenized fund on Ethereum",
       "source_link": "https://sosovalue.xyz/news/cluster/9",
-      "release_time": 1795445249397
+      "release_time": 1795445917711
     },
     {
       "id": 10,
       "title": "Bitcoin miners report record hash rate as difficulty adjusts upward",
       "source_link": "https://sosovalue.xyz/news/cluster/10",
-      "release_time": 1795438049397
+      "release_time": 1795438717711
     }
   ],
   "news_sentiment": {

@@ -1,6 +1,6 @@
 // SOSO Desk — signal engine tests. Run: node test-engine.mjs
 // No network, no key. Exits non-zero on any failure.
-import { analyzeDesk, buildSignal, scoreNewsSentiment, tradeTicket } from './signal-engine.js';
+import { analyzeDesk, buildSignal, scoreNewsSentiment, tradeTicket, summarizeDesk, appendHistoryEntry } from './signal-engine.js';
 import { readFileSync } from 'node:fs';
 
 let passed = 0;
@@ -121,6 +121,18 @@ console.log('== desk analysis on the real sample snapshot ==');
   check('regime is a string', typeof desk.regime === 'string' && desk.regime.length > 0);
   console.log(`  sample desk regime: ${desk.regime} (${desk.regimeScore})`);
   for (const s of desk.signals) console.log(`    ${s.asset}: ${s.direction} ${s.strength} cap ${s.capPct}% [${s.confirmations.join(',')}]`);
+}
+
+console.log('== signal history ==');
+{
+  const snap = JSON.parse(readFileSync(new URL('./data/snapshot.json', import.meta.url), 'utf8'));
+  const entry = summarizeDesk(analyzeDesk(snap, 'balanced'));
+  check('history entry has regime + 6 signals', entry.signals.length === 6 && typeof entry.regime === 'string');
+  let log = appendHistoryEntry([], entry);
+  check('append to empty log', log.length === 1 && log[0] === entry);
+  for (let i = 0; i < 35; i++) log = appendHistoryEntry(log, { ...entry, fetched_at: `t${i}` });
+  check('log caps at 30, newest first', log.length === 30 && log[0].fetched_at === 't34');
+  check('non-array log tolerated', appendHistoryEntry(null, entry).length === 1);
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

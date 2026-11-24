@@ -189,6 +189,25 @@ function renderTables() {
   $('provenance').innerHTML = prov.join('<br>');
 }
 
+async function renderHistory() {
+  const tbody = $('historyTable').querySelector('tbody');
+  let log = [];
+  try {
+    const res = await fetch('./data/signals-log.json', { cache: 'no-cache' });
+    if (res.ok) log = await res.json();
+  } catch { /* history is optional */ }
+  if (!Array.isArray(log) || log.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="4">No history yet — one entry is appended on every refresh.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = log.map((e) => `<tr>
+    <td>${fmtTime(e.fetched_at)}</td>
+    <td>${esc(e.source || 'n/a')}</td>
+    <td>${esc(e.regime || '')} <span style="color:var(--muted)">(${e.regimeScore ?? ''})</span></td>
+    <td>${(e.signals || []).map((s) => `<span class="dir ${esc(s.direction)}">${esc(s.asset)}: ${esc(s.direction)} ${s.strength >= 0 ? '+' : ''}${s.strength}</span>`).join(' · ')}</td>
+  </tr>`).join('');
+}
+
 function loadPrefs() {
   try {
     if (typeof localStorage === 'undefined') return;
@@ -224,6 +243,7 @@ async function init() {
   loadPrefs();
   renderDesk();
   renderTables();
+  renderHistory();
 
   document.querySelectorAll('.profile').forEach((btn) => {
     btn.addEventListener('click', () => {

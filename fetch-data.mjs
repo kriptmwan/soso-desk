@@ -30,7 +30,7 @@
 
 import { writeFileSync, renameSync, readFileSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
-import { scoreNewsSentiment } from './signal-engine.js';
+import { scoreNewsSentiment, analyzeDesk, summarizeDesk, appendHistoryEntry } from './signal-engine.js';
 
 const BASE = 'https://openapi.sosovalue.com/openapi/v1';
 const OUT = new URL('./data/snapshot.json', import.meta.url);
@@ -251,6 +251,21 @@ async function main() {
   writeFileSync(tmp, `${JSON.stringify(snapshot, null, 2)}\n`);
   renameSync(tmp, OUT.pathname);
   console.log(`WROTE ${OUT.pathname} (source=${topSource}) — market ${market.length} [${sections.market.status}], etf ${etf.length} [${sections.etf.status}], news ${news.length} [${sections.news.status}]`);
+
+  // Append this run to the signal-history log (the desk's track record).
+  try {
+    const logPath = new URL('./data/signals-log.json', import.meta.url);
+    let log = [];
+    try { log = JSON.parse(readFileSync(logPath, 'utf8')); } catch { /* first run */ }
+    const entry = summarizeDesk(analyzeDesk(snapshot, 'balanced'));
+    log = appendHistoryEntry(log, entry, 30);
+    const logTmp = `${logPath.pathname}.tmp`;
+    writeFileSync(logTmp, `${JSON.stringify(log, null, 2)}\n`);
+    renameSync(logTmp, logPath.pathname);
+    console.log(`WROTE ${logPath.pathname} — ${log.length} entries (latest: ${entry.regime})`);
+  } catch (e) {
+    console.log(`history log skipped: ${e.message}`);
+  }
 }
 
 main().catch((e) => { console.error('FATAL:', e.message); process.exit(1); });
