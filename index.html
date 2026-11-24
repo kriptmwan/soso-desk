@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOSO Desk — Explainable On-Chain Finance Copilot</title>
+<meta name="description" content="SOSO Desk turns SoSoValue market snapshots, ETF flows and hot news into ranked, explainable trading signals with risk controls. Read-only decision support — it never moves funds.">
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#2d333b; --text:#e6edf3; --muted:#8b949e; --green:#3fb950; --red:#f85149; --amber:#d29922; --blue:#58a6ff; --purple:#bc8cff; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  a { color:var(--blue); }
+  header { padding:28px 20px 18px; max-width:1080px; margin:0 auto; }
+  h1 { margin:0 0 4px; font-size:28px; letter-spacing:-.5px; }
+  h1 span { color:var(--green); }
+  .tagline { color:var(--muted); margin:0 0 14px; max-width:760px; }
+  .badges { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:999px; font-size:12px; font-weight:700; letter-spacing:.4px; border:1px solid var(--line); }
+  .badge.live { background:#12261a; color:var(--green); border-color:#1f4d2e; }
+  .badge.sample { background:#2b2305; color:var(--amber); border-color:#5c4a08; }
+  .badge.mixed { background:#1a2340; color:var(--blue); border-color:#2c4a8a; }
+  .badge.stale { background:#2b1215; color:var(--red); border-color:#5c1f24; }
+  .badge.failed { background:#2b1215; color:var(--red); border-color:#5c1f24; }
+  .meta { color:var(--muted); font-size:13px; }
+  .btn { display:inline-block; padding:6px 12px; border-radius:6px; border:1px solid var(--line); background:var(--panel2); color:var(--text); font-size:13px; cursor:pointer; text-decoration:none; }
+  .btn:hover { border-color:var(--blue); }
+  .btn.primary { background:#1f6feb; border-color:#1f6feb; color:#fff; }
+  .btn.active { border-color:var(--green); color:var(--green); }
+  main { max-width:1080px; margin:0 auto; padding:0 20px 40px; }
+  section { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin-bottom:16px; }
+  h2 { margin:0 0 4px; font-size:18px; }
+  .sub { color:var(--muted); font-size:13px; margin:0 0 12px; }
+  .regime { font-size:20px; font-weight:700; }
+  .regime small { display:block; font-size:13px; color:var(--muted); font-weight:400; margin-top:4px; }
+  .controls { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:8px 0; }
+  .controls label { color:var(--muted); font-size:13px; margin-right:2px; }
+  select { background:var(--panel2); color:var(--text); border:1px solid var(--line); border-radius:6px; padding:6px 8px; font-size:13px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; }
+  .card { background:var(--panel2); border:1px solid var(--line); border-radius:8px; padding:14px; }
+  .card h3 { margin:0 0 2px; font-size:17px; }
+  .dir { font-weight:800; font-size:13px; letter-spacing:.5px; }
+  .dir.ACCUMULATE { color:var(--green); } .dir.REDUCE { color:var(--red); }
+  .dir.WAIT { color:var(--muted); } .dir.DIVERGENT { color:var(--amber); }
+  .bar { height:8px; background:#0d1117; border-radius:4px; overflow:hidden; margin:8px 0 4px; }
+  .bar i { display:block; height:100%; background:var(--green); }
+  .bar.neg i { background:var(--red); }
+  .math { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12.5px; background:#0d1117; border-radius:6px; padding:8px 10px; margin:8px 0; white-space:pre-wrap; }
+  .card ul { margin:6px 0; padding-left:18px; font-size:13.5px; }
+  .card li { margin-bottom:3px; }
+  .cap { font-size:13px; color:var(--muted); }
+  .cap b { color:var(--text); }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th, td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .pos { color:var(--green); } .neg { color:var(--red); }
+  .flowbar { height:6px; background:#0d1117; border-radius:3px; overflow:hidden; margin-top:3px; }
+  .flowbar i { display:block; height:100%; background:var(--blue); }
+  .newslist { list-style:none; margin:0; padding:0; }
+  .newslist li { padding:8px 0; border-bottom:1px solid var(--line); font-size:14px; }
+  .newslist li:last-child { border-bottom:none; }
+  .newslist time { color:var(--muted); font-size:12px; display:block; }
+  footer { color:var(--muted); font-size:13px; }
+  footer code { background:#0d1117; padding:1px 5px; border-radius:4px; }
+  .warn { background:#2b2305; border:1px solid #5c4a08; color:#e3b341; border-radius:8px; padding:10px 12px; font-size:13.5px; margin-bottom:16px; }
+  .hidden { display:none; }
+  @media (max-width:640px){ h1{font-size:22px;} }
+</style>
+</head>
+<body>
+<header>
+  <h1>SOSO <span>Desk</span></h1>
+  <p class="tagline">A one-person on-chain finance copilot. It reads SoSoValue market snapshots, ETF flows and hot news, then produces <b>ranked, explainable signals with risk controls</b> — position-size caps, a two-input confirmation rule, and a hard NO-TRADE state when inputs conflict. Read-only decision support: it never moves funds, never holds keys, never trades.</p>
+  <div class="badges" id="badges"></div>
+  <p class="meta" id="dataMeta"></p>
+  <p><a class="btn" id="refreshBtn" href="#" target="_blank" rel="noopener">↻ Refresh live data (GitHub Actions)</a>
+  <span class="meta">Runs <code>fetch-data.mjs</code> with the repo secret and commits a fresh snapshot.</span></p>
+</header>
+<main>
+  <div class="warn hidden" id="sampleWarn"></div>
+
+  <section id="regimeSection">
+    <h2>Market regime</h2>
+    <p class="sub">Mean signal strength across all tracked assets, with the copilot's overall stance.</p>
+    <div class="regime" id="regime">Loading…</div>
+  </section>
+
+  <section>
+    <h2>Your desk</h2>
+    <p class="sub">Pick a risk profile, then stress-test any signal with What-If. The engine recomputes live in your browser — nothing is hardcoded.</p>
+    <div class="controls">
+      <label>Risk profile:</label>
+      <button class="btn profile" data-profile="conservative">Conservative · max 2%/trade</button>
+      <button class="btn profile active" data-profile="balanced">Balanced · max 5%/trade</button>
+      <button class="btn profile" data-profile="aggressive">Aggressive · max 10%/trade</button>
+    </div>
+    <div class="controls">
+      <label>What-If — ETF flows:</label>
+      <select id="whatifEtf">
+        <option value="as-is">As reported</option>
+        <option value="zero">Zero flows</option>
+        <option value="flipped">Flipped (outflows)</option>
+      </select>
+      <label>What-If — news sentiment:</label>
+      <select id="whatifNews">
+        <option value="as-is">As reported</option>
+        <option value="neutral">Neutral (0)</option>
+        <option value="negative">Negative (−0.60)</option>
+      </select>
+      <button class="btn" id="resetWhatif">Reset</button>
+    </div>
+    <div class="cards" id="signalCards"></div>
+  </section>
+
+  <section>
+    <h2>ETF flows <span class="badge" id="etfBadge"></span></h2>
+    <p class="sub">Daily net inflows per tracked US spot ETF (SoSoValue <code>/etfs/{ticker}/market-snapshot</code>). Flows are the heaviest input in the scoring matrix (50%).</p>
+    <table id="etfTable"><thead><tr><th>ETF</th><th class="num">Net inflow</th><th class="num">Cumulative</th><th class="num">Net assets</th><th class="num">Price</th><th class="num">Prem/disc</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section>
+    <h2>Market snapshot <span class="badge" id="marketBadge"></span></h2>
+    <p class="sub">24h snapshot per tracked currency (SoSoValue <code>/currencies/{id}/market-snapshot</code>).</p>
+    <table id="marketTable"><thead><tr><th>Asset</th><th class="num">Price</th><th class="num">24h</th><th class="num">24h volume</th><th class="num">Market cap</th><th class="num">Rank</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section>
+    <h2>Hot news &amp; sentiment <span class="badge" id="newsBadge"></span></h2>
+    <p class="sub">Latest crypto news (SoSoValue <code>/news</code>). Sentiment is a transparent keyword lexicon over titles — bullish/bearish counts are shown, method in the footer.</p>
+    <p id="sentimentLine"></p>
+    <ul class="newslist" id="newsList"></ul>
+  </section>
+
+  <section>
+    <h2>How the signal is built</h2>
+    <p class="sub">The math is shown on every signal card. No black box, no model calls in the shipped app.</p>
+    <table><tbody>
+      <tr><th>ETF flows (50%)</th><td>Total daily net inflow across the asset's ETFs. ±$500M maps to ±100.</td></tr>
+      <tr><th>Market momentum (30%)</th><td>24h price change. ±5% maps to ±100.</td></tr>
+      <tr><th>News sentiment (20%)</th><td>Keyword lexicon over headlines: (bullish − bearish) / scored. −1…1 maps to −100…100.</td></tr>
+      <tr><th>Confirmation rule</th><td>A directional call needs ≥ 2 of 3 components agreeing in sign. Otherwise WAIT.</td></tr>
+      <tr><th>Conflict detection</th><td>If any component ≥ 25 points against the total while |strength| &lt; 40, the call is DIVERGENT — size 0, no trade.</td></tr>
+      <tr><th>Position cap</th><td>Profile max (2% / 5% / 10%) scaled by |strength| / 100. Zero unless the call is confirmed.</td></tr>
+    </tbody></table>
+  </section>
+
+  <footer>
+    <section>
+      <h2>Data provenance &amp; pipeline</h2>
+      <p id="provenance"></p>
+      <p><b>Air-gapped data pipeline:</b> a scheduled GitHub Actions workflow runs <code>fetch-data.mjs</code> with the SoSoValue key stored as a repo secret (<code>SOSO_API_KEY</code> — never in the repo, never in the browser). It writes <code>data/snapshot.json</code>, and this static page reads that file. That keeps the demo up 100% of the time, prevents key leakage, and makes the signal engine deterministically testable (<code>node test-engine.mjs</code>, 26 checks).</p>
+      <p><b>Known limitation (environmental, not missing integration):</b> from some networks, Cloudflare's edge blocks the SoSoValue <code>/market-snapshot</code>, <code>/etfs</code> and <code>/news/hot</code> paths even with a valid key (verified 24 Nov 2026 from the build VM). <code>/news</code> and <code>/currencies</code> work from anywhere. The fetcher retries every endpoint on every run and labels each section LIVE / SAMPLE / STALE / FAILED, so the dashboard never presents stale or sample numbers as live. If the Actions runner also hits the block, market and ETF sections stay on the checked-in sample and say so.</p>
+      <p>Sources: <a href="https://sosovalue-1.gitbook.io/sosovalue-api-doc">SoSoValue API docs</a> · <a href="https://app.akindo.io/wave-hacks/JBEQXgN4Zi2jA3wA">AKINDO SoSoValue Wave 3</a> · <a href="https://github.com/kriptmwan/soso-desk">GitHub repo</a></p>
+      <p>SOSO Desk is decision support, not financial advice. It never executes trades, holds funds, or asks for a wallet.</p>
+    </section>
+  </footer>
+</main>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
