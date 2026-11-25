@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
   "source": "live",
-  "fetched_at": "2026-11-24T16:55:29.225Z",
-  "fetch_commit": "a785af4",
+  "fetched_at": "2026-11-25T01:52:33.434Z",
+  "fetch_commit": "2549f36",
   "generator": "fetch-data.mjs (SoSoValue API)",
   "sections": {
     "market": {
       "status": "ok",
       "source": "live",
-      "fetched_at": "2026-11-24T16:55:15.022Z",
+      "fetched_at": "2026-11-25T01:52:19.343Z",
       "error": null
     },
     "etf": {
       "status": "ok",
       "source": "live",
-      "fetched_at": "2026-11-24T16:55:27.908Z",
+      "fetched_at": "2026-11-25T01:52:32.135Z",
       "error": null
     },
     "news": {
       "status": "ok",
       "source": "live",
-      "fetched_at": "2026-11-24T16:55:29.225Z",
+      "fetched_at": "2026-11-25T01:52:33.434Z",
       "error": null
     }
   },
@@ -29,50 +29,50 @@
       "symbol": "BTC",
       "name": "Bitcoin",
       "currency_id": "1673723677362319866",
-      "price": 59587.59,
-      "change_pct_24h": -0.0419,
-      "turnover_24h": 32225788485,
-      "turnover_rate": 0.02688375,
-      "high_24h": 62264.01,
-      "low_24h": 59317.5,
-      "marketcap": 1198708829895.27,
-      "fdv": 1198709902471.89,
+      "price": 59168.5,
+      "change_pct_24h": -0.0333,
+      "turnover_24h": 29744635491,
+      "turnover_rate": 0.0249894,
+      "high_24h": 61256.93,
+      "low_24h": 59150,
+      "marketcap": 1190290288591.5,
+      "fdv": 1190290288591.5,
       "marketcap_rank": 1,
       "ath": 126199.63,
       "down_from_ath": 0.53,
       "cycle_low": 55130,
-      "up_from_cycle_low": 0.08
+      "up_from_cycle_low": 0.07
     },
     {
       "symbol": "ETH",
       "name": "Ethereum",
       "currency_id": "1673723677362319867",
-      "price": 1672.75,
-      "change_pct_24h": -0.0532,
-      "turnover_24h": 12261665421,
-      "turnover_rate": 0.05996218,
-      "high_24h": 1769.99,
-      "low_24h": 1664.18,
-      "marketcap": 204489972322.25,
-      "fdv": 204489972322.25,
+      "price": 1655.86,
+      "change_pct_24h": -0.0317,
+      "turnover_24h": 10527426372,
+      "turnover_rate": 0.0520065,
+      "high_24h": 1711.83,
+      "low_24h": 1654.4,
+      "marketcap": 202425207334.94,
+      "fdv": 202425207334.94,
       "marketcap_rank": 2,
       "ath": 4956.78,
-      "down_from_ath": 0.66,
+      "down_from_ath": 0.67,
       "cycle_low": 1505.68,
-      "up_from_cycle_low": 0.11
+      "up_from_cycle_low": 0.1
     },
     {
       "symbol": "SOL",
       "name": "Solana",
       "currency_id": "1673723677362319875",
-      "price": 69.18,
-      "change_pct_24h": -0.0702,
-      "turnover_24h": 2786978032,
-      "turnover_rate": 0.06804227,
-      "high_24h": 74.7,
+      "price": 69,
+      "change_pct_24h": -0.0425,
+      "turnover_24h": 2366429434,
+      "turnover_rate": 0.05792,
+      "high_24h": 72.15,
       "low_24h": 68.57,
-      "marketcap": 40959512665.38,
-      "fdv": 44143967269.5,
+      "marketcap": 40856861325,
+      "fdv": 44033320623,
       "marketcap_rank": 7,
       "ath": 295.83,
       "down_from_ath": 0.77,
@@ -83,17 +83,17 @@
       "symbol": "BNB",
       "name": "Binance Coin",
       "currency_id": "1673723677362319869",
-      "price": 545.82,
-      "change_pct_24h": -0.0326,
-      "turnover_24h": 553014327,
-      "turnover_rate": 0.00770421,
-      "high_24h": 567.05,
-      "low_24h": 543.26,
-      "marketcap": 71780797478.94,
-      "fdv": 71780797478.94,
+      "price": 542.44,
+      "change_pct_24h": -0.0297,
+      "turnover_24h": 480831398,
+      "turnover_rate": 0.00674035,
+      "high_24h": 559.62,
+      "low_24h": 542.16,
+      "marketcap": 71336285484.88,
+      "fdv": 71336285484.88,
       "marketcap_rank": 4,
       "ath": 1375.11,
-      "down_from_ath": 0.6,
+      "down_from_ath": 0.61,
       "cycle_low": 503.75,
       "up_from_cycle_low": 0.08
     },
@@ -101,14 +101,14 @@
       "symbol": "XRP",
       "name": "XRP",
       "currency_id": "1673723677362319871",
-      "price": 0.9136,
-      "change_pct_24h": -0.0608,
-      "turnover_24h": 1869927564,
-      "turnover_rate": 0.03222414,
-      "high_24h": 0.9741,
+      "price": 0.9134,
+      "change_pct_24h": -0.038,
+      "turnover_24h": 1500908019,
+      "turnover_rate": 0.02587056,
+      "high_24h": 0.9615,
       "low_24h": 0.9093,
-      "marketcap": 58028772112.2608,
-      "fdv": 91346828866.336,
+      "marketcap": 58016068790.8702,
+      "fdv": 91326831749.684,
       "marketcap_rank": 6,
       "ath": 3.6607,
       "down_from_ath": 0.75,
@@ -119,19 +119,19 @@
       "symbol": "DOGE",
       "name": "Dogecoin",
       "currency_id": "1673723677362319874",
-      "price": 0.05486,
-      "change_pct_24h": -0.0554,
-      "turnover_24h": 508611971,
-      "turnover_rate": 0.05909669,
-      "high_24h": 0.05829,
+      "price": 0.05462,
+      "change_pct_24h": -0.0396,
+      "turnover_24h": 424234859,
+      "turnover_rate": 0.04950719,
+      "high_24h": 0.05695,
       "low_24h": 0.05441,
-      "marketcap": 8606438054.0996,
-      "fdv": 8606578495.6996,
+      "marketcap": 8569156079.8132,
+      "fdv": 8569233094.0132,
       "marketcap_rank": 12,
       "ath": 0.73995,
       "down_from_ath": 0.93,
       "cycle_low": 0.04914,
-      "up_from_cycle_low": 0.12
+      "up_from_cycle_low": 0.11
     }
   ],
   "etf": [
@@ -144,10 +144,10 @@
       "net_inflow": -509341439.99999994,
       "cum_inflow": 62315635623.659996,
       "net_assets": 46012355519.99999,
-      "mkt_price": 33.66,
+      "mkt_price": 33.76,
       "prem_dsc": null,
-      "value_traded": 1023114360.038,
-      "volume": "30215243"
+      "value_traded": 1910918235,
+      "volume": "56506628"
     },
     {
       "asset": "BTC",
@@ -155,12 +155,13 @@
       "name": "Fidelity Wise Origin Bitcoin Fund",
       "date": "2026-11-24",
       "sponsor_fee": 0,
-      "net_inflow": 13287729,
-      "cum_inflow": 9968666005.125,
-      "net_assets": 10397832907.687681,
-      "mkt_price": 51.75,
-      "value_traded": 125844483.901,
-      "volume": "2419117"
+      "net_inflow": -44030500.65,
+      "cum_inflow": 9924635504.475,
+      "net_assets": 10089639988.524721,
+      "mkt_price": 51.9,
+      "prem_dsc": null,
+      "value_traded": 262530880,
+      "volume": "5047399"
     },
     {
       "asset": "BTC",
@@ -168,13 +169,13 @@
       "name": "ARK 21Shares Bitcoin ETF",
       "date": "2026-11-24",
       "sponsor_fee": 0.0021,
-      "net_inflow": 0,
-      "cum_inflow": 849004074.555,
-      "net_assets": 1672515486.1299999,
-      "mkt_price": 19.72,
+      "net_inflow": -15798177.6,
+      "cum_inflow": 833205896.955,
+      "net_assets": 1614080057.67,
+      "mkt_price": 19.79,
       "prem_dsc": null,
-      "value_traded": 39213764.136,
-      "volume": "1976521"
+      "value_traded": 79161742,
+      "volume": "3994260"
     },
     {
       "asset": "ETH",
@@ -182,13 +183,13 @@
       "name": "Grayscale Ethereum Trust",
       "date": "2026-11-24",
       "sponsor_fee": 0.025,
-      "net_inflow": 0,
-      "cum_inflow": -5546557392,
-      "net_assets": 1158272116.2,
-      "mkt_price": 13.3645,
+      "net_inflow": -3750011.9999999995,
+      "cum_inflow": -5550307404,
+      "net_assets": 1121233498.6499999,
+      "mkt_price": 13.4,
       "prem_dsc": null,
-      "value_traded": 14723294.905,
-      "volume": "1093465"
+      "value_traded": 23950686,
+      "volume": "1782546"
     },
     {
       "asset": "ETH",
@@ -199,10 +200,10 @@
       "net_inflow": 0,
       "cum_inflow": 389657332.09,
       "net_assets": 185871737.37,
-      "mkt_price": 11.94,
+      "mkt_price": 11.95,
       "prem_dsc": null,
-      "value_traded": 1499849.006,
-      "volume": "125071"
+      "value_traded": 2947120,
+      "volume": "245899"
     },
     {
       "asset": "SOL",
@@ -213,10 +214,10 @@
       "net_inflow": 0,
       "cum_inflow": 1102571755.54,
       "net_assets": 736591649.1,
-      "mkt_price": 9.5801,
+      "mkt_price": 9.59,
       "prem_dsc": null,
-      "value_traded": 17127602.746,
-      "volume": "1780049"
+      "value_traded": 30368119,
+      "volume": "3157563"
     },
     {
       "asset": "SOL",
@@ -224,163 +225,163 @@
       "name": "Grayscale Solana Trust",
       "date": "2026-11-24",
       "sponsor_fee": 0.0035,
-      "net_inflow": -1927415,
+      "net_inflow": 0,
       "cum_inflow": 116535009.754,
-      "net_assets": 96338479.566,
-      "mkt_price": 5.235,
+      "net_assets": 91742768.988,
+      "mkt_price": 5.25,
       "prem_dsc": null,
-      "value_traded": 1678856.627,
-      "volume": "320455"
+      "value_traded": 3670341,
+      "volume": "699924"
     }
   ],
   "news": [
     {
-      "id": "2125271003032662016",
-      "title": "The European Union’s latest sanctions proposal would make it easier for Germany to ban Russian players from the Ice Hockey World Championships next year, according to officials familiar with the matter",
-      "source_link": "https://sosovalue.com/research/2125271003032662016?from=888001",
-      "original_link": "https://twitter.com/business/status/2125270755906560132",
-      "release_time": 1795539008000
+      "id": "2125406919418535936",
+      "title": "The Bank of Japan will likely raise its benchmark interest rate three more times to 2% through the middle of next year, taking it to a level not seen since 1993, according to a former BOJ board member",
+      "source_link": "https://sosovalue.com/research/2125406919418535936?from=888001",
+      "original_link": "https://twitter.com/business/status/2125406653189140855",
+      "release_time": 1795571408000
     },
     {
-      "id": "2125270554544123904",
-      "title": "South Korea’s proposed 20% crypto exchange cap puts $11.2B Dunamu deal in focus",
-      "source_link": "https://sosovalue.com/research/2125270554544123904?from=888001",
-      "original_link": "https://crypto.news/south-korea-crypto-exchange-cap-naver-dunamu-deal/",
-      "release_time": 1795538954000
+      "id": "2125406676253634560",
+      "title": "CleanSpark is considering selling slightly more than its mined Bitcoin each quarter to reduce treasury risk\n",
+      "source_link": "https://sosovalue.com/research/2125406676253634560?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/538529",
+      "release_time": 1795571403000
     },
     {
-      "id": "2125271324083843072",
+      "id": "2125406880814034944",
+      "title": "Data: Uniswap ecosystem-related entities allegedly sold 612 thousand UNI, and deposited UNI worth $2.88 million into Coinbase after 14 days",
+      "source_link": "https://sosovalue.com/research/2125406880814034944?from=888001",
+      "original_link": "https://www.chaincatcher.com/article/2307811",
+      "release_time": 1795571206000
+    },
+    {
+      "id": "2125406685397217280",
+      "title": "Uniswap ecosystem-related entities suspected of selling 612 thousand UNI tokens, replenished Coinbase with UNI worth $2.88 million after 14 days\n",
+      "source_link": "https://sosovalue.com/research/2125406685397217280?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/538528",
+      "release_time": 1795571184000
+    },
+    {
+      "id": "2125406182577233920",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2125271324083843072?from=888001",
-      "original_link": "https://twitter.com/yb_effect/status/2125270502411256277",
-      "release_time": 1795538948000
+      "source_link": "https://sosovalue.com/research/2125406182577233920?from=888001",
+      "original_link": "https://twitter.com/andyyy/status/2125405358311325905",
+      "release_time": 1795571100000
     },
     {
-      "id": "2125269759608578048",
-      "title": "Chinese automaker BYD is in exclusive discussions to acquire a French car plant from Ineos, as British billionaire Jim Ratcliffe’s SUV venture shifts production to the US to avoid trade tariffs.",
-      "source_link": "https://sosovalue.com/research/2125269759608578048?from=888001",
-      "original_link": "https://twitter.com/business/status/2125269510684840091",
-      "release_time": 1795538711000
+      "id": "2125405403461980160",
+      "title": "AI company Next Technology sold 500 bitcoins for AI development, currently holding 5,333 bitcoins\n",
+      "source_link": "https://sosovalue.com/research/2125405403461980160?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/538527",
+      "release_time": 1795571083000
     },
     {
-      "id": "2125270296025632768",
+      "id": "2125405412607877120",
+      "title": "Traded ETH for over 5 years, accumulated profit of $7 million, a whale sold 37,929 ETH\n",
+      "source_link": "https://sosovalue.com/research/2125405412607877120?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/538525",
+      "release_time": 1795570991000
+    },
+    {
+      "id": "2125405421485649920",
+      "title": "The review has been postponed, and Ukraine's cryptocurrency regulation and taxation bill remains in its second reading stage\n",
+      "source_link": "https://sosovalue.com/research/2125405421485649920?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/538524",
+      "release_time": 1795570891000
+    },
+    {
+      "id": "2125405125604237312",
+      "title": "Ukraine delays review of cryptocurrency regulation and taxation bill",
+      "source_link": "https://sosovalue.com/research/2125405125604237312?from=888001",
+      "original_link": "https://www.panewslab.com/zh/articles/01a2105b-fb00-7494-813d-164039090666",
+      "release_time": 1795570782000
+    },
+    {
+      "id": "2125405245052252160",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2125270296025632768?from=888001",
-      "original_link": "https://twitter.com/ByzGeneral/status/2125269039241118158",
-      "release_time": 1795538599000
+      "source_link": "https://sosovalue.com/research/2125405245052252160?from=888001",
+      "original_link": "https://twitter.com/CloutedMind/status/2125403971401445683",
+      "release_time": 1795570769000
     },
     {
-      "id": "2125269590657691648",
+      "id": "2125404137600061440",
+      "title": "Bullpen: Approximately 99.8% of the stolen funds originated from a single account, and we are assisting in tracking and recovering the assets\n",
+      "source_link": "https://sosovalue.com/research/2125404137600061440?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/538523",
+      "release_time": 1795570665000
+    },
+    {
+      "id": "2125404171446464512",
+      "title": "Trader Bets on Bigger Anthropic Swings Amid Rising Put/Call Ratio | Options Income Daily",
+      "source_link": "https://sosovalue.com/research/2125404171446464512?from=888001",
+      "original_link": "https://www.moomoo.com/community/feed/trader-bets-on-bigger-anthropic-swings-amid-rising-put-call-117674516807690?futusource=news_headline_list&report_id=1005685110&report_type=market&src=3",
+      "release_time": 1795570633000
+    },
+    {
+      "id": "2125404243392991232",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2125269590657691648?from=888001",
-      "original_link": "https://twitter.com/allen_su1024/status/2125268258328564123",
-      "release_time": 1795538413000
+      "source_link": "https://sosovalue.com/research/2125404243392991232?from=888001",
+      "original_link": "https://twitter.com/jrugss/status/2125403145589477538",
+      "release_time": 1795570572000
     },
     {
-      "id": "2125268501664632832",
-      "title": "Bank of England rate-setter Megan Greene said the UK needs to raise interest rates faster if war in the Middle East drags on, expressing skepticism at the prospect of an imminent and lasting peace deal",
-      "source_link": "https://sosovalue.com/research/2125268501664632832?from=888001",
-      "original_link": "https://twitter.com/business/status/2125268245598912889",
-      "release_time": 1795538409000
-    },
-    {
-      "id": "2125269537014112256",
+      "id": "2125407008054009856",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2125269537014112256?from=888001",
-      "original_link": "https://twitter.com/allthemoney/status/2125267980766560395",
-      "release_time": 1795538346000
+      "source_link": "https://sosovalue.com/research/2125407008054009856?from=888001",
+      "original_link": "https://twitter.com/bsc_daily/status/2125403011677905305",
+      "release_time": 1795570540000
     },
     {
-      "id": "2125269280526659584",
+      "id": "2125403196856168448",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2125269280526659584?from=888001",
-      "original_link": "https://twitter.com/catmoneyz/status/2125267952836698563",
-      "release_time": 1795538340000
+      "source_link": "https://sosovalue.com/research/2125403196856168448?from=888001",
+      "original_link": "https://twitter.com/StargateFinance/status/2125402947509174375",
+      "release_time": 1795570525000
     },
     {
-      "id": "2125268791323267072",
-      "title": null,
-      "source_link": "https://sosovalue.com/research/2125268791323267072?from=888001",
-      "original_link": "https://twitter.com/conduitxyz/status/2125267397183684683",
-      "release_time": 1795538207000
+      "id": "2125403142779006976",
+      "title": "About half a dozen vendors in India are experiencing payment delays by Foxconn’s local unit, said sources, with one even filing an insolvency lawsuit to recover $15 million in unpaid dues",
+      "source_link": "https://sosovalue.com/research/2125403142779006976?from=888001",
+      "original_link": "https://twitter.com/business/status/2125402876633555035",
+      "release_time": 1795570508000
     },
     {
-      "id": "2125268273935769600",
-      "title": "Report: U.S. side discussed carrying out targeted strikes on senior Iranian officials; Donald Trump has not yet made a decision\n",
-      "source_link": "https://sosovalue.com/research/2125268273935769600?from=888001",
-      "original_link": "https://www.odaily.news/newsflash/538391",
-      "release_time": 1795538154000
+      "id": "2125404151674515456",
+      "title": "KOSH shuts down all services, withdrawal portal open until December 15",
+      "source_link": "https://sosovalue.com/research/2125404151674515456?from=888001",
+      "original_link": "https://foresightnews.pro/news/detail/118469",
+      "release_time": 1795570500000
     },
     {
-      "id": "2125267257164304384",
-      "title": "Turkey released former minister Fatma Betul Sayan Kaya from jail just 18 days after she was arrested in an investment-fund investigation that’s shaken the country’s markets",
-      "source_link": "https://sosovalue.com/research/2125267257164304384?from=888001",
-      "original_link": "https://twitter.com/business/status/2125266982442357060",
-      "release_time": 1795538108000
+      "id": "2125402862500405248",
+      "title": "A whale sold 17.183 thousand ETH, receiving 28.68 million DAI in exchange, at a transaction price of $1,669\n",
+      "source_link": "https://sosovalue.com/research/2125402862500405248?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/538521",
+      "release_time": 1795570411000
     },
     {
-      "id": "2125266975556853760",
-      "title": "South Korea's proposed 20% shareholding cap may affect Naver's $11.2 billion acquisition of Dunamu, with excess shares losing voting rights\n",
-      "source_link": "https://sosovalue.com/research/2125266975556853760?from=888001",
-      "original_link": "https://www.odaily.news/newsflash/538390",
-      "release_time": 1795538080000
+      "id": "2125404151775178752",
+      "title": "CertiK was invited to attend the INTERPOL meeting, where it explained cross-chain tracking and asset freezing procedures",
+      "source_link": "https://sosovalue.com/research/2125404151775178752?from=888001",
+      "original_link": "https://foresightnews.pro/news/detail/118468",
+      "release_time": 1795570399000
     },
     {
-      "id": "2125271084762619904",
-      "title": null,
-      "source_link": "https://sosovalue.com/research/2125271084762619904?from=888001",
-      "original_link": "https://twitter.com/Umbisam/status/2125266583455137797",
-      "release_time": 1795538013000
-    },
-    {
-      "id": "2125267301596880896",
-      "title": null,
-      "source_link": "https://sosovalue.com/research/2125267301596880896?from=888001",
-      "original_link": "https://twitter.com/avax/status/2125266303401476134",
-      "release_time": 1795537946000
-    },
-    {
-      "id": "2125267307815591936",
-      "title": null,
-      "source_link": "https://sosovalue.com/research/2125267307815591936?from=888001",
-      "original_link": "https://twitter.com/xerocooleth/status/2125266024576729234",
-      "release_time": 1795537880000
-    },
-    {
-      "id": "2125265932509200384",
-      "title": "Market Experiences Sharp Decline; South Korea Publishes Comprehensive Crypto Regulation Draft",
-      "source_link": "https://sosovalue.com/research/2125265932509200384?from=888001",
-      "original_link": null,
-      "release_time": 1795537858505
-    },
-    {
-      "id": "2125265986502221824",
-      "title": "As North Korean cyberthieves were funneling billions out of Binance last month, the world’s largest crypto exchange looked to two other companies to help stop the bleeding: Tether and Circle",
-      "source_link": "https://sosovalue.com/research/2125265986502221824?from=888001",
-      "original_link": "https://twitter.com/business/status/2125265773127934010",
-      "release_time": 1795537820000
-    },
-    {
-      "id": "2125264731239309312",
-      "title": "Saudi Arabia is more optimistic about its economy, forecasting a smaller contraction for 2026 than it did a month ago as higher oil exports soften the impact of Houthi attacks",
-      "source_link": "https://sosovalue.com/research/2125264731239309312?from=888001",
-      "original_link": "https://twitter.com/business/status/2125264463171362830",
-      "release_time": 1795537508000
-    },
-    {
-      "id": "2125265770692698112",
-      "title": null,
-      "source_link": "https://sosovalue.com/research/2125265770692698112?from=888001",
-      "original_link": "https://twitter.com/Techub_News/status/2125264042142937258",
-      "release_time": 1795537407000
+      "id": "2125402615559188480",
+      "title": "A whale sold 17,183 ETH 8 hours ago in exchange for 28.68 million DAI",
+      "source_link": "https://sosovalue.com/research/2125402615559188480?from=888001",
+      "original_link": "https://www.panewslab.com/zh/articles/01a21055-f072-73c8-be1c-23bd2b38995a",
+      "release_time": 1795570385000
     }
   ],
   "news_sentiment": {
-    "score": -1,
-    "bullish": 0,
+    "score": -0.6,
+    "bullish": 1,
     "bearish": 4,
-    "contested": 6,
-    "total": 10,
+    "contested": 10,
+    "total": 15,
     "method": "keyword lexicon over news titles (bullish/bearish word lists in signal-engine.js)"
   }
 }
