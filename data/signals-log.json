@@ -1,5 +1,50 @@
 [
   {
+    "fetched_at": "2026-11-27T16:02:29.345Z",
+    "source": "live",
+    "regime": "DIVERGENT — mixed signals, trade small or not at all",
+    "regimeScore": 0.7,
+    "profile": "Balanced",
+    "signals": [
+      {
+        "asset": "BTC",
+        "direction": "DIVERGENT",
+        "strength": -28.6,
+        "capPct": 0
+      },
+      {
+        "asset": "SOL",
+        "direction": "WAIT",
+        "strength": 6.7,
+        "capPct": 0
+      },
+      {
+        "asset": "DOGE",
+        "direction": "WAIT",
+        "strength": 6.7,
+        "capPct": 0
+      },
+      {
+        "asset": "BNB",
+        "direction": "WAIT",
+        "strength": 6.6,
+        "capPct": 0
+      },
+      {
+        "asset": "XRP",
+        "direction": "WAIT",
+        "strength": 6.6,
+        "capPct": 0
+      },
+      {
+        "asset": "ETH",
+        "direction": "WAIT",
+        "strength": 6.5,
+        "capPct": 0
+      }
+    ]
+  },
+  {
     "fetched_at": "2026-11-27T01:26:51.412Z",
     "source": "live",
     "regime": "NEUTRAL — no confirmed market edge",
