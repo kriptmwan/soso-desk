@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
   "source": "live",
-  "fetched_at": "2026-11-27T16:02:29.345Z",
-  "fetch_commit": "047f698",
+  "fetched_at": "2026-11-28T01:00:36.117Z",
+  "fetch_commit": "24c58c8",
   "generator": "fetch-data.mjs (SoSoValue API)",
   "sections": {
     "market": {
       "status": "ok",
       "source": "live",
-      "fetched_at": "2026-11-27T16:02:15.694Z",
+      "fetched_at": "2026-11-28T01:00:22.684Z",
       "error": null
     },
     "etf": {
       "status": "ok",
       "source": "live",
-      "fetched_at": "2026-11-27T16:02:27.987Z",
+      "fetched_at": "2026-11-28T01:00:34.804Z",
       "error": null
     },
     "news": {
       "status": "ok",
       "source": "live",
-      "fetched_at": "2026-11-27T16:02:29.345Z",
+      "fetched_at": "2026-11-28T01:00:36.117Z",
       "error": null
     }
   },
@@ -29,17 +29,17 @@
       "symbol": "BTC",
       "name": "Bitcoin",
       "currency_id": "1673723677362319866",
-      "price": 60058.57,
-      "change_pct_24h": -0.0092,
-      "turnover_24h": 28386413860,
-      "turnover_rate": 0.02349375,
+      "price": 59888,
+      "change_pct_24h": -0.0133,
+      "turnover_24h": 29193604354,
+      "turnover_rate": 0.02423063,
       "high_24h": 62248.91,
       "low_24h": 58792.37,
-      "marketcap": 1208253806867.25,
-      "fdv": 1208253806867.25,
+      "marketcap": 1204822292400,
+      "fdv": 1204822292400,
       "marketcap_rank": 1,
       "ath": 126199.63,
-      "down_from_ath": 0.52,
+      "down_from_ath": 0.53,
       "cycle_low": 55130,
       "up_from_cycle_low": 0.09
     },
@@ -47,50 +47,50 @@
       "symbol": "ETH",
       "name": "Ethereum",
       "currency_id": "1673723677362319867",
-      "price": 1672.33,
-      "change_pct_24h": -0.0117,
-      "turnover_24h": 11221486908,
-      "turnover_rate": 0.05488529,
+      "price": 1661.57,
+      "change_pct_24h": -0.0234,
+      "turnover_24h": 11023226832,
+      "turnover_rate": 0.05426473,
       "high_24h": 1755.22,
       "low_24h": 1634.03,
-      "marketcap": 204453458477.51,
-      "fdv": 204453458477.51,
+      "marketcap": 203137976955.79,
+      "fdv": 203137976955.79,
       "marketcap_rank": 2,
       "ath": 4956.78,
       "down_from_ath": 0.66,
       "cycle_low": 1505.68,
-      "up_from_cycle_low": 0.11
+      "up_from_cycle_low": 0.1
     },
     {
       "symbol": "SOL",
       "name": "Solana",
       "currency_id": "1673723677362319875",
-      "price": 72.1,
-      "change_pct_24h": 0.0155,
-      "turnover_24h": 2613031654,
-      "turnover_rate": 0.06119458,
+      "price": 71.71,
+      "change_pct_24h": 0.0063,
+      "turnover_24h": 2622836868,
+      "turnover_rate": 0.06174399,
       "high_24h": 73.93,
       "low_24h": 70.12,
-      "marketcap": 42700376166.7,
-      "fdv": 46020385703.6,
+      "marketcap": 42479225807.13,
+      "fdv": 45771442376.79,
       "marketcap_rank": 7,
       "ath": 295.83,
       "down_from_ath": 0.76,
       "cycle_low": 60.13,
-      "up_from_cycle_low": 0.2
+      "up_from_cycle_low": 0.19
     },
     {
       "symbol": "BNB",
       "name": "Binance Coin",
       "currency_id": "1673723677362319869",
-      "price": 553.67,
-      "change_pct_24h": 0.0042,
-      "turnover_24h": 570878481,
-      "turnover_rate": 0.00784033,
+      "price": 554.62,
+      "change_pct_24h": -0.0021,
+      "turnover_24h": 559010126,
+      "turnover_rate": 0.00766418,
       "high_24h": 568.3,
       "low_24h": 542.85,
-      "marketcap": 72813064739.87,
-      "fdv": 72813064739.87,
+      "marketcap": 72937989124.66,
+      "fdv": 72937989124.66,
       "marketcap_rank": 4,
       "ath": 1375.11,
       "down_from_ath": 0.6,
@@ -101,37 +101,37 @@
       "symbol": "XRP",
       "name": "XRP",
       "currency_id": "1673723677362319871",
-      "price": 0.9529,
-      "change_pct_24h": 0.0045,
-      "turnover_24h": 1811365423,
-      "turnover_rate": 0.02992757,
+      "price": 0.9495,
+      "change_pct_24h": 0.0027,
+      "turnover_24h": 1837884203,
+      "turnover_rate": 0.03047445,
       "high_24h": 0.9874,
       "low_24h": 0.9312,
-      "marketcap": 60524974765.5137,
-      "fdv": 95276262288.454,
+      "marketcap": 60309018301.8735,
+      "fdv": 94936311305.37,
       "marketcap_rank": 6,
       "ath": 3.6607,
       "down_from_ath": 0.74,
       "cycle_low": 0.86,
-      "up_from_cycle_low": 0.11
+      "up_from_cycle_low": 0.1
     },
     {
       "symbol": "DOGE",
       "name": "Dogecoin",
       "currency_id": "1673723677362319874",
-      "price": 0.05768,
-      "change_pct_24h": 0.0178,
-      "turnover_24h": 441798896,
-      "turnover_rate": 0.04881077,
+      "price": 0.0578,
+      "change_pct_24h": 0.0212,
+      "turnover_24h": 432330510,
+      "turnover_rate": 0.0476648,
       "high_24h": 0.0591,
       "low_24h": 0.05628,
-      "marketcap": 9051258817.7648,
-      "fdv": 9051353989.7648,
+      "marketcap": 9070225861.308,
+      "fdv": 9070464575.2502,
       "marketcap_rank": 12,
       "ath": 0.73995,
       "down_from_ath": 0.92,
       "cycle_low": 0.04914,
-      "up_from_cycle_low": 0.17
+      "up_from_cycle_low": 0.18
     }
   ],
   "etf": [
@@ -139,14 +139,14 @@
       "asset": "BTC",
       "ticker": "IBIT",
       "name": "iShares Bitcoin Trust",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "sponsor_fee": 0.0025,
       "net_inflow": -329712120,
       "cum_inflow": 61810626303.659996,
       "net_assets": 44600687640,
-      "mkt_price": 33.905,
-      "value_traded": 1092093669.595,
-      "volume": "32179138"
+      "mkt_price": 33.86,
+      "value_traded": 1548507727.373,
+      "volume": "45656687"
     },
     {
       "asset": "BTC",
@@ -157,37 +157,37 @@
       "net_inflow": -6514249,
       "cum_inflow": 9918121255.475,
       "net_assets": 10144169899.49216,
-      "mkt_price": 52.13,
-      "value_traded": 140968219.036,
-      "volume": "2711484"
+      "mkt_price": 52,
+      "value_traded": 185445767,
+      "volume": "3564850"
     },
     {
       "asset": "BTC",
       "ticker": "ARKB",
       "name": "ARK 21Shares Bitcoin ETF",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "sponsor_fee": 0.0021,
-      "net_inflow": -14899651.500000002,
-      "cum_inflow": 818306245.4549999,
-      "net_assets": 1608864368.97,
-      "mkt_price": 19.8703,
+      "net_inflow": -5741457.41,
+      "cum_inflow": 812564788.045,
+      "net_assets": 1597610019.655,
+      "mkt_price": 19.84,
       "prem_dsc": null,
-      "value_traded": 23935910.725,
-      "volume": "1207554"
+      "value_traded": 37600104.027,
+      "volume": "1895328"
     },
     {
       "asset": "ETH",
       "ticker": "ETHE",
       "name": "Grayscale Ethereum Trust",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "sponsor_fee": 0.025,
-      "net_inflow": 0,
-      "cum_inflow": -5550307404,
-      "net_assets": 1130827638.75,
-      "mkt_price": 13.36,
+      "net_inflow": -2665920,
+      "cum_inflow": -5552973324,
+      "net_assets": 1113268197.6,
+      "mkt_price": 13.35,
       "prem_dsc": null,
-      "value_traded": 17337541.781,
-      "volume": "1297871"
+      "value_traded": 24744499.582,
+      "volume": "1852362"
     },
     {
       "asset": "ETH",
@@ -197,11 +197,11 @@
       "sponsor_fee": 0.002,
       "net_inflow": 0,
       "cum_inflow": 389657332.09,
-      "net_assets": 181268877.13,
-      "mkt_price": 11.93,
+      "net_assets": 179437826.92,
+      "mkt_price": 11.92,
       "prem_dsc": null,
-      "value_traded": 1550572.342,
-      "volume": "130014"
+      "value_traded": 2763417,
+      "volume": "232047"
     },
     {
       "asset": "SOL",
@@ -211,11 +211,11 @@
       "sponsor_fee": 0.002,
       "net_inflow": 0,
       "cum_inflow": 1102571755.54,
-      "net_assets": 710872651.98,
-      "mkt_price": 9.995,
+      "net_assets": 727609759.74,
+      "mkt_price": 10.01,
       "prem_dsc": null,
-      "value_traded": 11637254.383,
-      "volume": "1175919"
+      "value_traded": 19732161,
+      "volume": "1987271"
     },
     {
       "asset": "SOL",
@@ -223,163 +223,163 @@
       "name": "Grayscale Solana Trust",
       "date": "2026-11-27",
       "sponsor_fee": 0.0035,
-      "net_inflow": 0,
-      "cum_inflow": 116535009.754,
-      "net_assets": 93467691.192,
-      "mkt_price": 5.455,
+      "net_inflow": -871696,
+      "cum_inflow": 115663313.754,
+      "net_assets": 94438128.134,
+      "mkt_price": 5.47,
       "prem_dsc": null,
-      "value_traded": 3953197.831,
-      "volume": "730328"
+      "value_traded": 7923969,
+      "volume": "1458768"
     }
   ],
   "news": [
     {
-      "id": "2126345619767255040",
-      "title": "In the more than 10 months since US forces captured longtime President Nicolás Maduro and ousted him from office, Venezuela has entered a fast-changing and uncertain phase shaped heavily by Washington. Here's what to know.",
-      "source_link": "https://sosovalue.com/research/2126345619767255040?from=888001",
-      "original_link": "https://twitter.com/business/status/2126345399443063225",
-      "release_time": 1795795223000
+      "id": "2126481034738360320",
+      "title": "The New York Times' newly hired AI author is accused of failing to disclose a $50,000 stipend received from an Anthropic shareholder",
+      "source_link": "https://sosovalue.com/research/2126481034738360320?from=888001",
+      "original_link": "https://www.techflowpost.com/newsletter/detail_147303.html",
+      "release_time": 1795827550000
     },
     {
-      "id": "2126344392362909696",
+      "id": "2126479964244807680",
+      "title": "Bio Protocol: The first project to adopt the Molecule Coin-to-Company model will be launched in the coming weeks\n",
+      "source_link": "https://sosovalue.com/research/2126479964244807680?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/539804",
+      "release_time": 1795827076000
+    },
+    {
+      "id": "2126478267701735424",
+      "title": "Telegram founder: Users of older iOS versions may face security risks, recommends updating as soon as possible",
+      "source_link": "https://sosovalue.com/research/2126478267701735424?from=888001",
+      "original_link": "https://www.panewslab.com/zh/articles/01a21f9f-d4a3-76fd-b938-870cbb6b08f8",
+      "release_time": 1795826885000
+    },
+    {
+      "id": "2126478096054038528",
+      "title": "OpenAI countersues Apple: pressuring suppliers and restricting employee mobility",
+      "source_link": "https://sosovalue.com/research/2126478096054038528?from=888001",
+      "original_link": "https://www.techflowpost.com/newsletter/detail_147302.html",
+      "release_time": 1795826852000
+    },
+    {
+      "id": "2126478254464262144",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2126344392362909696?from=888001",
-      "original_link": "https://twitter.com/Solana_Emperor/status/2126343709104955852",
-      "release_time": 1795794820000
+      "source_link": "https://sosovalue.com/research/2126478254464262144?from=888001",
+      "original_link": "https://twitter.com/veH0rny/status/2126476920850395247",
+      "release_time": 1795826580000
     },
     {
-      "id": "2126343687890235392",
-      "title": "Sky's repurchase over the past 7 days exceeded $5 million, reaching a new high since March 2025",
-      "source_link": "https://sosovalue.com/research/2126343687890235392?from=888001",
-      "original_link": "https://www.panewslab.com/zh/articles/01a21db6-27f5-70b1-8fe3-e5fa47065e44",
-      "release_time": 1795794795000
+      "id": "2126477457609416704",
+      "title": "Placeholder partner: The current crypto market may be in a deep discount range, with some assets priced 60% to 90% below their future prices\n",
+      "source_link": "https://sosovalue.com/research/2126477457609416704?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/539801",
+      "release_time": 1795826485000
     },
     {
-      "id": "2126343402117095424",
-      "title": "Aguila Trades closed 2,440 BTC long positions, incurring losses exceeding $3.5 million",
-      "source_link": "https://sosovalue.com/research/2126343402117095424?from=888001",
-      "original_link": "https://www.techflowpost.com/newsletter/detail_147283.html",
-      "release_time": 1795794735000
-    },
-    {
-      "id": "2126343164834615296",
-      "title": "Bio Protocol plans to adjust its funding model, introducing milestone-based disbursements",
-      "source_link": "https://sosovalue.com/research/2126343164834615296?from=888001",
-      "original_link": "https://www.panewslab.com/zh/articles/01a21db4-2596-77d3-b75f-81f83690a23c",
-      "release_time": 1795794663000
-    },
-    {
-      "id": "2126342877363777536",
-      "title": "Arkham tracks $826M in mixed Bitcoin across Wasabi and Samourai",
-      "source_link": "https://sosovalue.com/research/2126342877363777536?from=888001",
-      "original_link": "https://crypto.news/arkham-bitcoin-mixer-tracking/",
-      "release_time": 1795794575000
-    },
-    {
-      "id": "2126343412106358784",
+      "id": "2126477569460801536",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2126343412106358784?from=888001",
-      "original_link": "https://twitter.com/laurashin/status/2126342282378912253",
-      "release_time": 1795794480000
+      "source_link": "https://sosovalue.com/research/2126477569460801536?from=888001",
+      "original_link": "https://twitter.com/wublockchain12/status/2126476073064161440",
+      "release_time": 1795826378000
     },
     {
-      "id": "2126344092816732160",
-      "title": "Bio Protocol plans to adjust its research and development funding mechanism, exploring a model where token holders can apply for company equity\n",
-      "source_link": "https://sosovalue.com/research/2126344092816732160?from=888001",
-      "original_link": "https://www.wublock123.com/news/bio-protocol-revises-research-funding-token-holders-equity-ownership-72730",
-      "release_time": 1795794427000
+      "id": "2126475273878843392",
+      "title": "South Korean media: As global tech giants carry out layoffs, demand for FDE positions rises",
+      "source_link": "https://sosovalue.com/research/2126475273878843392?from=888001",
+      "original_link": "https://www.techflowpost.com/newsletter/detail_147301.html",
+      "release_time": 1795826178000
     },
     {
-      "id": "2126342816648663040",
-      "title": "Bio Protocol plans to adjust its research funding mechanism and explore a model where token holders can apply for company equity\n",
-      "source_link": "https://sosovalue.com/research/2126342816648663040?from=888001",
-      "original_link": "https://www.wublock123.com/news/news-72730",
-      "release_time": 1795794427000
+      "id": "2126475168727392256",
+      "title": "VTB, Russia's second-largest bank, launches Bitcoin trading on its app",
+      "source_link": "https://sosovalue.com/research/2126475168727392256?from=888001",
+      "original_link": "https://www.techflowpost.com/newsletter/detail_147300.html",
+      "release_time": 1795826154000
     },
     {
-      "id": "2126341806503190528",
-      "title": "Norse Atlantic's Norwegian subsidiary filed for bankruptcy protection after the budget airline couldn’t secure short-term financing fast enough to save the struggling business",
-      "source_link": "https://sosovalue.com/research/2126341806503190528?from=888001",
-      "original_link": "https://twitter.com/business/status/2126341570282553448",
-      "release_time": 1795794310000
+      "id": "2126474946741538816",
+      "title": "WLFI tag wallet sold about $20.07 million in ETH and METH\n",
+      "source_link": "https://sosovalue.com/research/2126474946741538816?from=888001",
+      "original_link": "https://www.wublock123.com/news/wlfi-tagged-wallet-sells-20m-eth-meth-72740",
+      "release_time": 1795826048000
     },
     {
-      "id": "2126342365816254464",
+      "id": "2126474136822181888",
+      "title": "Musk agreed with the Sequoia partner: Anthropic should take seriously the accusation that Claude rewrote customers' code without authorization",
+      "source_link": "https://sosovalue.com/research/2126474136822181888?from=888001",
+      "original_link": "https://www.techflowpost.com/newsletter/detail_147299.html",
+      "release_time": 1795825906000
+    },
+    {
+      "id": "2126474923094798336",
+      "title": "Foreign institutional investors look ahead to China’s stock market in 2027, with AI compute power and semiconductors becoming key allocation areas\n",
+      "source_link": "https://sosovalue.com/research/2126474923094798336?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/539798",
+      "release_time": 1795825828000
+    },
+    {
+      "id": "2126479074025500672",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2126342365816254464?from=888001",
-      "original_link": "https://twitter.com/CloutedMind/status/2126341463042592888",
-      "release_time": 1795794284000
+      "source_link": "https://sosovalue.com/research/2126479074025500672?from=888001",
+      "original_link": "https://twitter.com/MASTERBTCLTC/status/2126473721917669760",
+      "release_time": 1795825817000
     },
     {
-      "id": "2126340559213899776",
-      "title": "Codelco's chief commercial officer resigned to take up a role at Trafigura, the latest management change at the Chilean state-owned copper producer under new CEO",
-      "source_link": "https://sosovalue.com/research/2126340559213899776?from=888001",
-      "original_link": "https://twitter.com/business/status/2126340317263667278",
-      "release_time": 1795794011000
-    },
-    {
-      "id": "2126340337580863488",
-      "title": "Lookonchain: Bitcoin ETF sees net outflow of $19.81 million in a single day",
-      "source_link": "https://sosovalue.com/research/2126340337580863488?from=888001",
-      "original_link": "https://www.techflowpost.com/newsletter/detail_147282.html",
-      "release_time": 1795793995000
-    },
-    {
-      "id": "2126341699825262592",
+      "id": "2126479047745560576",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2126341699825262592?from=888001",
-      "original_link": "https://twitter.com/whale_alert/status/2126339952984162668",
-      "release_time": 1795793924000
+      "source_link": "https://sosovalue.com/research/2126479047745560576?from=888001",
+      "original_link": "https://twitter.com/cryptodotnews/status/2126473649301709282",
+      "release_time": 1795825800000
     },
     {
-      "id": "2126340389772156928",
+      "id": "2126473844011249664",
+      "title": "Today the Fear & Greed Index fell to 10, and the market is in an \"extreme fear\" state",
+      "source_link": "https://sosovalue.com/research/2126473844011249664?from=888001",
+      "original_link": "https://foresightnews.pro/news/detail/118725",
+      "release_time": 1795825800000
+    },
+    {
+      "id": "2126472362268254208",
+      "title": "Smartestmoney's HYPE long position unrealized profit is approximately $34.48 million",
+      "source_link": "https://sosovalue.com/research/2126472362268254208?from=888001",
+      "original_link": "https://www.techflowpost.com/newsletter/detail_147298.html",
+      "release_time": 1795825481000
+    },
+    {
+      "id": "2126472413874970624",
+      "title": "Speculative funds have significantly withdrawn from Nasdaq futures, with the reduction in positions over the past six weeks reaching its highest level since 2022.\n",
+      "source_link": "https://sosovalue.com/research/2126472413874970624?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/539795",
+      "release_time": 1795825377000
+    },
+    {
+      "id": "2126472454714908672",
+      "title": "Telegram founder: outdated iOS versions pose security risks, urges users to update their systems\n",
+      "source_link": "https://sosovalue.com/research/2126472454714908672?from=888001",
+      "original_link": "https://www.wublock123.com/news/telegram-founder-warns-old-ios-security-risks-update-system-72737",
+      "release_time": 1795825214000
+    },
+    {
+      "id": "2126471146958712832",
+      "title": "Only qualified investors who have passed the test are eligible; Russia's second-largest bank, VTB, has launched Bitcoin trading services\n",
+      "source_link": "https://sosovalue.com/research/2126471146958712832?from=888001",
+      "original_link": "https://www.odaily.news/newsflash/539792",
+      "release_time": 1795825076000
+    },
+    {
+      "id": "2126472985892581376",
       "title": null,
-      "source_link": "https://sosovalue.com/research/2126340389772156928?from=888001",
-      "original_link": "https://twitter.com/CloutedMind/status/2126339885086683471",
-      "release_time": 1795793908000
-    },
-    {
-      "id": "2126339304617881600",
-      "title": "Britons Stockpile Cash and Food as UK Pushes Emergency Preparedness",
-      "source_link": "https://sosovalue.com/research/2126339304617881600?from=888001",
-      "original_link": "https://twitter.com/business/status/2126339046142099732",
-      "release_time": 1795793708000
-    },
-    {
-      "id": "2126340338740060160",
-      "title": "ARK Invest, Tether, Deutsche Telekom, and others become Genesis Validators on the LayerZero Zero blockchain",
-      "source_link": "https://sosovalue.com/research/2126340338740060160?from=888001",
-      "original_link": "https://foresightnews.pro/news/detail/118723",
-      "release_time": 1795793658000
-    },
-    {
-      "id": "2126339337725898752",
-      "title": null,
-      "source_link": "https://sosovalue.com/research/2126339337725898752?from=888001",
-      "original_link": "https://twitter.com/liquidtrading/status/2126338803077874111",
-      "release_time": 1795793650000
-    },
-    {
-      "id": "2126339341831376896",
-      "title": null,
-      "source_link": "https://sosovalue.com/research/2126339341831376896?from=888001",
-      "original_link": "https://twitter.com/Utoday_en/status/2126338369076527520",
-      "release_time": 1795793547000
-    },
-    {
-      "id": "2126339066420793344",
-      "title": "After 18 months of review and approval, Switzerland's first spot Bitcoin ETF adopts a physically backed fund structure\n",
-      "source_link": "https://sosovalue.com/research/2126339066420793344?from=888001",
-      "original_link": "https://www.odaily.news/newsflash/539692",
-      "release_time": 1795793418000
+      "source_link": "https://sosovalue.com/research/2126472985892581376?from=888001",
+      "original_link": "https://twitter.com/whale_alert/status/2126470558002913418",
+      "release_time": 1795825063000
     }
   ],
   "news_sentiment": {
-    "score": 0.33,
+    "score": -0.33,
     "bullish": 2,
-    "bearish": 1,
-    "contested": 10,
-    "total": 13,
+    "bearish": 4,
+    "contested": 9,
+    "total": 15,
     "method": "keyword lexicon over news titles (bullish/bearish word lists in signal-engine.js)"
   }
 }
